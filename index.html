@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download MubiTV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <style>
+        body { 
+            background-color: #131313; 
+            color: white; 
+            overflow-x: hidden;
+        }
+        
+        /* Subtle moving background gradient */
+        .animate-bg {
+            background: linear-gradient(-45deg, #131313, #1c1b1b, #2a080a, #131313);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating animation for the app logo */
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Infinite scrolling marquee for streaming logos */
+        .animate-scroll {
+            display: flex;
+            width: 200%;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .glass-panel {
+            background: rgba(28, 27, 27, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center animate-bg relative">
+    
+    <!-- Background Red Glow Effect -->
+    <div class="absolute top-[10%] left-[20%] w-72 h-72 bg-[#E21221]/20 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-[10%] right-[20%] w-72 h-72 bg-[#E21221]/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="z-10 w-full max-w-md px-6 flex flex-col items-center text-center mt-10">
+        
+        <!-- Floating Logo -->
+        <div class="relative w-28 h-28 mb-6 animate-float">
+            <div class="absolute inset-0 bg-[#E21221] rounded-3xl blur-xl opacity-40"></div>
+            <img src="applogo1.png" alt="MubiTV Logo" class="relative w-full h-full object-cover rounded-3xl border border-white/20 shadow-2xl" onerror="this.src='https://via.placeholder.com/150/1c1b1b/ffffff?text=Logo'">
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-black mb-3 tracking-tight drop-shadow-lg">Mubi<span class="text-[#E21221]">TV</span></h1>
+        <p class="text-white/70 text-sm md:text-base font-medium mb-8 leading-relaxed max-w-sm">Watch your favorite Movies and TV shows with LIVE TV for free, anywhere.</p>
+        
+        <!-- Device Icons Row -->
+        <div class="flex items-center justify-center gap-6 mb-8 text-white/50">
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">smartphone</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Phone</span>
+            </div>
+            <div class="w-px h-6 bg-white/10"></div>
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">tablet_mac</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Tablet</span>
+            </div>
+            <div class="w-px h-6 bg-white/10"></div>
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">tv</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Android TV</span>
+            </div>
+        </div>
+
+        <!-- Download Button -->
+        <a href="MubiTV.apk" download class="w-full bg-[#E21221] hover:bg-red-700 text-white font-black py-4 rounded-2xl shadow-[0_10px_30px_rgba(226,18,33,0.4)] transition-all active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-sm border border-red-500/50 hover:border-red-400">
+            <span class="material-symbols-outlined text-[22px]">download</span>
+            Download APK
+        </a>
+        <p class="text-white/30 text-[10px] mt-4 font-bold tracking-widest uppercase">Version 1.0 • 100% Free & Ad-Free</p>
+    </div>
+
+    <!-- Scrolling Streaming Logos -->
+    <div class="w-full mt-auto pt-16 pb-8 overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+        <p class="text-center text-white/40 text-[10px] font-bold uppercase tracking-widest mb-6">All your favorites in one place</p>
+        
+        <div class="animate-scroll">
+            <!-- Set 1 -->
+            <div class="flex w-1/2 justify-around items-center px-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-5 md:h-7 opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="h-8 md:h-10 opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" class="h-4 md:h-5 opacity-50 grayscale brightness-0 invert transition-all hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="h-4 md:h-5 opacity-50 grayscale brightness-0 invert transition-all hover:opacity-100">
+            </div>
+            <!-- Set 2 (Duplicate to create infinite loop effect) -->
+            <div class="flex w-1/2 justify-around items-center px-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-5 md:h-7 opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="h-8 md:h-10 opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" class="h-4 md:h-5 opacity-50 grayscale brightness-0 invert transition-all hover:opacity-100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="h-4 md:h-5 opacity-50 grayscale brightness-0 invert transition-all hover:opacity-100">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
