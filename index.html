@@ -35,22 +35,20 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Right to Left scrolling marquee */
-        .animate-scroll {
+        /* Seamless Infinite Marquee CSS */
+        .animate-scroll, .animate-scroll-reverse {
             display: flex;
-            width: 200%;
-            animation: scroll 25s linear infinite;
+            width: max-content;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        .animate-scroll-reverse {
+            animation: scroll-reverse 30s linear infinite;
         }
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
-        }
-
-        /* Left to Right scrolling marquee */
-        .animate-scroll-reverse {
-            display: flex;
-            width: 200%;
-            animation: scroll-reverse 25s linear infinite;
         }
         @keyframes scroll-reverse {
             0% { transform: translateX(-50%); }
@@ -112,68 +110,68 @@
         <p class="text-white/50 text-[10px] mt-4 mb-10 font-bold tracking-widest uppercase">Version 1.0 • 100% Free & Ad-Free</p>
     </div>
 
-    <div class="w-full overflow-hidden flex flex-col gap-6 z-10" style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
+    <div class="w-full overflow-hidden flex flex-col gap-10 z-10" style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
         
         <div class="animate-scroll">
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/320px-Disney%2B_logo.svg.png" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Prime_Video.png/320px-Prime_Video.png" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/HBO_Max_Logo.svg/320px-HBO_Max_Logo.svg.png" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/320px-Apple_TV_Plus_Logo.svg.png" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Crunchyroll_Logo.png/320px-Crunchyroll_Logo.png" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Crunchyroll_Logo.png" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
             </div>
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/320px-Disney%2B_logo.svg.png" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Prime_Video.png/320px-Prime_Video.png" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/HBO_Max_Logo.svg/320px-HBO_Max_Logo.svg.png" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/320px-Apple_TV_Plus_Logo.svg.png" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Crunchyroll_Logo.png/320px-Crunchyroll_Logo.png" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Crunchyroll_Logo.png" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
             </div>
         </div>
 
         <div class="animate-scroll-reverse">
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Marvel_Studios_2016_logo.svg/320px-Marvel_Studios_2016_logo.svg.png" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Pixar_logo.svg/320px-Pixar_logo.svg.png" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/20th_Century_Studios_2020_logo.svg/320px-20th_Century_Studios_2020_logo.svg.png" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/DreamWorks_Animation_SKG_logo_with_text.svg/320px-DreamWorks_Animation_SKG_logo_with_text.svg.png" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cartoon_Network_logo.svg/320px-Cartoon_Network_logo.svg.png" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Universal_Studios_2012_logo.svg/320px-Universal_Studios_2012_logo.svg.png" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Marvel_Studios_2016_logo.svg" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Pixar_logo.svg" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/20th_Century_Studios_2020_logo.svg" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/DreamWorks_Animation_SKG_logo_with_text.svg" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cartoon_Network_logo.svg" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Universal_Studios_2012_logo.svg" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
             </div>
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Marvel_Studios_2016_logo.svg/320px-Marvel_Studios_2016_logo.svg.png" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Pixar_logo.svg/320px-Pixar_logo.svg.png" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/20th_Century_Studios_2020_logo.svg/320px-20th_Century_Studios_2020_logo.svg.png" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/DreamWorks_Animation_SKG_logo_with_text.svg/320px-DreamWorks_Animation_SKG_logo_with_text.svg.png" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cartoon_Network_logo.svg/320px-Cartoon_Network_logo.svg.png" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Universal_Studios_2012_logo.svg/320px-Universal_Studios_2012_logo.svg.png" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Marvel_Studios_2016_logo.svg" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Pixar_logo.svg" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/20th_Century_Studios_2020_logo.svg" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/DreamWorks_Animation_SKG_logo_with_text.svg" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cartoon_Network_logo.svg" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 h-12 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Universal_Studios_2012_logo.svg" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
             </div>
         </div>
 
         <div class="animate-scroll">
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Animax_logo.svg/320px-Animax_logo.svg.png" alt="Animax" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/GMA_Network_logo.svg/320px-GMA_Network_logo.svg.png" alt="GMA" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/NBA_TV_logo.svg/320px-NBA_TV_logo.svg.png" alt="NBA TV" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Pinoy_Box_Office_%28PBO%29_logo.png/320px-Pinoy_Box_Office_%28PBO%29_logo.png" alt="PBO" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Disney_Channel_logo_2014.svg/320px-Disney_Channel_logo_2014.svg.png" alt="Disney Channel" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cinemax_logo.svg/320px-Cinemax_logo.svg.png" alt="Cinemax" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/GTV_%28Philippine_TV_network%29_logo.svg/320px-GTV_%28Philippine_TV_network%29_logo.svg.png" alt="GTV" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/PBA_Rush_logo.png/320px-PBA_Rush_logo.png" alt="PBA Rush" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kapamilya_Channel_logo.svg/320px-Kapamilya_Channel_logo.svg.png" alt="Kapamilya Channel" class="max-h-full max-w-full object-contain"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Animax_logo.svg" alt="Animax" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/GMA_Network_logo.svg" alt="GMA" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/NBA_TV_logo.svg" alt="NBA TV" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Pinoy_Box_Office_%28PBO%29_logo.png" alt="PBO" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Disney_Channel_logo_2014.svg" alt="Disney Channel" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Cinemax_logo.svg" alt="Cinemax" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/GTV_%28Philippine_TV_network%29_logo.svg" alt="GTV" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/d/dd/PBA_Rush_logo.png" alt="PBA Rush" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Kapamilya_Channel_logo.svg" alt="Kapamilya Channel" class="max-h-full max-w-full object-contain"></div>
             </div>
-            <div class="flex w-1/2 justify-around items-center px-2">
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Animax_logo.svg/320px-Animax_logo.svg.png" alt="Animax" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/GMA_Network_logo.svg/320px-GMA_Network_logo.svg.png" alt="GMA" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/NBA_TV_logo.svg/320px-NBA_TV_logo.svg.png" alt="NBA TV" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Pinoy_Box_Office_%28PBO%29_logo.png/320px-Pinoy_Box_Office_%28PBO%29_logo.png" alt="PBO" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Disney_Channel_logo_2014.svg/320px-Disney_Channel_logo_2014.svg.png" alt="Disney Channel" class="max-h-full max-w-full object-contain logo-bright"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cinemax_logo.svg/320px-Cinemax_logo.svg.png" alt="Cinemax" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/GTV_%28Philippine_TV_network%29_logo.svg/320px-GTV_%28Philippine_TV_network%29_logo.svg.png" alt="GTV" class="max-h-full max-w-full object-contain logo-color"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/PBA_Rush_logo.png/320px-PBA_Rush_logo.png" alt="PBA Rush" class="max-h-full max-w-full object-contain"></div>
-                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kapamilya_Channel_logo.svg/320px-Kapamilya_Channel_logo.svg.png" alt="Kapamilya Channel" class="max-h-full max-w-full object-contain"></div>
+            <div class="flex items-center justify-center gap-12 px-6 min-w-max">
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Animax_logo.svg" alt="Animax" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/GMA_Network_logo.svg" alt="GMA" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/NBA_TV_logo.svg" alt="NBA TV" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Pinoy_Box_Office_%28PBO%29_logo.png" alt="PBO" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Disney_Channel_logo_2014.svg" alt="Disney Channel" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Cinemax_logo.svg" alt="Cinemax" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/GTV_%28Philippine_TV_network%29_logo.svg" alt="GTV" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/en/d/dd/PBA_Rush_logo.png" alt="PBA Rush" class="max-h-full max-w-full object-contain"></div>
+                <div class="flex items-center justify-center w-20 h-10 shrink-0 bg-white/90 p-1.5 rounded-md"><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Kapamilya_Channel_logo.svg" alt="Kapamilya Channel" class="max-h-full max-w-full object-contain"></div>
             </div>
         </div>
 
