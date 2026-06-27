@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download MubiTV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <style>
+        body { 
+            background-color: #131313; 
+            color: white; 
+            overflow-x: hidden;
+        }
+        
+        /* Subtle moving background gradient */
+        .animate-bg {
+            background: linear-gradient(-45deg, #131313, #1c1b1b, #2a080a, #131313);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating animation for the app logo */
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Right to Left scrolling marquee */
+        .animate-scroll {
+            display: flex;
+            width: 200%;
+            animation: scroll 25s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Left to Right scrolling marquee */
+        .animate-scroll-reverse {
+            display: flex;
+            width: 200%;
+            animation: scroll-reverse 25s linear infinite;
+        }
+        @keyframes scroll-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Utility for white/black logos to be highly visible */
+        .logo-bright {
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .logo-color {
+            opacity: 0.9;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .logo-color:hover, .logo-bright:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center animate-bg relative py-12">
+    
+    <div class="absolute top-[5%] left-[10%] w-72 h-72 bg-[#E21221]/20 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-[20%] right-[10%] w-72 h-72 bg-[#E21221]/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="z-10 w-full max-w-md px-6 flex flex-col items-center text-center">
+        
+        <div class="relative w-28 h-28 mb-6 animate-float">
+            <div class="absolute inset-0 bg-[#E21221] rounded-3xl blur-xl opacity-40"></div>
+            <img src="applogo1.png" alt="MubiTV Logo" class="relative w-full h-full object-cover rounded-3xl border border-white/20 shadow-2xl" onerror="this.src='https://via.placeholder.com/150/1c1b1b/ffffff?text=Logo'">
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-black mb-3 tracking-tight drop-shadow-lg">Mubi<span class="text-[#E21221]">TV</span></h1>
+        <p class="text-white/80 text-sm md:text-base font-medium mb-8 leading-relaxed max-w-sm">Watch your favorite Movies and TV shows with LIVE TV for free, anywhere.</p>
+        
+        <div class="flex items-center justify-center gap-6 mb-8 text-white/60">
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">smartphone</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Phone</span>
+            </div>
+            <div class="w-px h-6 bg-white/20"></div>
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">tablet_mac</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Tablet</span>
+            </div>
+            <div class="w-px h-6 bg-white/20"></div>
+            <div class="flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-2xl">tv</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Android TV</span>
+            </div>
+        </div>
+
+        <a href="MubiTV.apk" download class="w-full bg-[#E21221] hover:bg-red-700 text-white font-black py-4 rounded-2xl shadow-[0_10px_30px_rgba(226,18,33,0.4)] transition-all active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-sm border border-red-500/50 hover:border-red-400">
+            <span class="material-symbols-outlined text-[22px]">download</span>
+            Download APK
+        </a>
+        <p class="text-white/50 text-[10px] mt-4 mb-10 font-bold tracking-widest uppercase">Version 1.0 • 100% Free & Ad-Free</p>
+    </div>
+
+    <div class="w-full overflow-hidden flex flex-col gap-6 z-10" style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
+        
+        <div class="animate-scroll">
+            <div class="flex w-1/2 justify-around items-center px-2">
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Netflix_2015_logo.svg" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Disney%2B_2024.svg" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Prime_Video_logo_(2024).svg" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-14 md:w-16 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/HBO_logo.svg" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Apple_TV_(logo).svg" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Crunchyroll_2024.svg" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Viu_logo.svg" alt="Viu" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Viva_One_logo_rb.png" alt="Viva One" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 md:w-28 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Vivamax_logo.png" alt="Vivamax" class="max-h-full max-w-full object-contain logo-color"></div>
+            </div>
+            <div class="flex w-1/2 justify-around items-center px-2">
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Netflix_2015_logo.svg" alt="Netflix" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Disney%2B_2024.svg" alt="Disney+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Prime_Video_logo_(2024).svg" alt="Prime Video" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-14 md:w-16 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/HBO_logo.svg" alt="HBO Max" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Apple_TV_(logo).svg" alt="Apple TV+" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Crunchyroll_2024.svg" alt="Crunchyroll" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Viu_logo.svg" alt="Viu" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Viva_One_logo_rb.png" alt="Viva One" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-24 md:w-28 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Vivamax_logo.png" alt="Vivamax" class="max-h-full max-w-full object-contain logo-color"></div>
+            </div>
+        </div>
+
+        <div class="animate-scroll-reverse">
+            <div class="flex w-1/2 justify-around items-center px-2">
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Marvel_Studios_2016_logo.svg" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Studio_Ghibli_logo.svg" alt="Studio Ghibli" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Pixar_logo.svg" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/20th_Century_Studios_(2020).svg" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Universal_Pictures_logo.svg" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 md:w-28 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/DreamWorks_Animation_SKG_logo_with_fishing_boy.svg" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Cartoon_Network_2010_logo.svg" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
+            </div>
+            <div class="flex w-1/2 justify-around items-center px-2">
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Marvel_Studios_2016_logo.svg" alt="Marvel" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Studio_Ghibli_logo.svg" alt="Studio Ghibli" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Pixar_logo.svg" alt="Pixar" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/20th_Century_Studios_(2020).svg" alt="20th Century" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Universal_Pictures_logo.svg" alt="Universal" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-24 md:w-28 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/DreamWorks_Animation_SKG_logo_with_fishing_boy.svg" alt="DreamWorks" class="max-h-full max-w-full object-contain logo-bright"></div>
+                <div class="flex items-center justify-center w-20 md:w-24 h-10 shrink-0"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Cartoon_Network_2010_logo.svg" alt="Cartoon Network" class="max-h-full max-w-full object-contain logo-bright"></div>
+            </div>
+        </div>
+
+        <div class="animate-scroll">
+            <div class="flex w-1/2 justify-around items-center px-4 gap-8">
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/1.png" alt="Channel 1" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/2.png" alt="Channel 2" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/3.png" alt="Channel 3" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/4.png" alt="Channel 4" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/5.png" alt="Channel 5" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/6.png" alt="Channel 6" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/7.png" alt="Channel 7" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/8.png" alt="Channel 8" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/9.png" alt="Channel 9" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/10.png" alt="Channel 10" class="max-h-full max-w-full object-contain logo-color"></div>
+            </div>
+            <div class="flex w-1/2 justify-around items-center px-4 gap-8">
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/1.png" alt="Channel 1" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/2.png" alt="Channel 2" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/3.png" alt="Channel 3" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/4.png" alt="Channel 4" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/5.png" alt="Channel 5" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/6.png" alt="Channel 6" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/7.png" alt="Channel 7" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/8.png" alt="Channel 8" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/9.png" alt="Channel 9" class="max-h-full max-w-full object-contain logo-color"></div>
+                <div class="flex items-center justify-center w-16 md:w-20 h-8 shrink-0"><img src="https://raw.githubusercontent.com/binzhilling-star/download/main/10.png" alt="Channel 10" class="max-h-full max-w-full object-contain logo-color"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
