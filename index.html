@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <a href="MubiTV.apk" download class="w-full bg-[#E21221] hover:bg-red-700 text-white font-black py-4 rounded-2xl shadow-[0_10px_30px_rgba(226,18,33,0.4)] transition-all active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-sm border border-red-500/50 hover:border-red-400">
+        <a href="MubiTV.apk" id="download-btn" download class="w-full bg-[#E21221] hover:bg-red-700 text-white font-black py-4 rounded-2xl shadow-[0_10px_30px_rgba(226,18,33,0.4)] transition-all active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-sm border border-red-500/50 hover:border-red-400">
             <span class="material-symbols-outlined text-[22px]">download</span>
             Download APK
         </a>
@@ -191,5 +191,54 @@
 
     </div>
 
+    <div class="mt-16 mb-4 z-10 w-full flex flex-col items-center justify-center text-center">
+        <div class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 px-5 py-2.5 rounded-full backdrop-blur-md shadow-lg">
+            <div class="flex items-center justify-center bg-green-500/20 rounded-full p-1">
+                <span class="material-symbols-outlined text-green-400 text-sm">trending_up</span>
+            </div>
+            <span class="text-white/80 text-xs font-semibold tracking-widest uppercase">
+                <span id="download-count-display" class="text-white font-black text-sm drop-shadow-md">1,024</span> Total Downloads
+            </span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Base starter number for visual appeal
+            let baseCount = 1024;
+            
+            // Retrieve actual local clicks if available, otherwise default to baseCount
+            let currentCount = localStorage.getItem('mubitv_downloads');
+            if (!currentCount) {
+                currentCount = baseCount;
+                localStorage.setItem('mubitv_downloads', currentCount);
+            }
+            
+            const countDisplay = document.getElementById('download-count-display');
+            
+            // Format number with commas
+            const updateDisplay = (num) => {
+                countDisplay.textContent = parseInt(num).toLocaleString();
+            };
+            
+            // Initial render
+            updateDisplay(currentCount);
+
+            // Listen for clicks on the download button
+            const downloadBtn = document.getElementById('download-btn');
+            downloadBtn.addEventListener('click', () => {
+                currentCount++;
+                localStorage.setItem('mubitv_downloads', currentCount);
+                updateDisplay(currentCount);
+                
+                // -------------------------------------------------------------
+                // NOTE: For true accuracy across ALL users globally, you will 
+                // need to replace this localStorage logic with a backend API call.
+                // Example:
+                // fetch('https://your-backend.com/api/increment-download', { method: 'POST' })
+                // -------------------------------------------------------------
+            });
+        });
+    </script>
 </body>
 </html>
